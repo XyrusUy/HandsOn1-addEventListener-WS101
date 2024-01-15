@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Bungee Spice", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        body {
+            margin: 0;
+            background-image: url(bg.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parent {
+            margin-top: 200px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: bisque (83, 42, 59, 0.5);
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 150px;
+            width: 80%;
+        }
+
+        button {
+            height: 30px;
+            border: 30px ;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="container">
+            <h1>JavaScript addEventListener() HandsOn</h1>
+            <div class="box">
+                <button id="bt1">Tap Me Up!</button>
+                <button id="bt2">Tap Me Up!</button>
+                <button id="bt3">Tap Me Up!</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function bt1() {
+            alert("button 1 CLick!")
+        }
+        function bt2() {
+            alert("button 2 CLick!")
+        } function bt3() {
+            alert("button 3 CLick!")
+        }
+
+        document.getElementById("bt1").addEventListener("click",bt1);
+        document.getElementById("bt2").addEventListener("click",bt2);
+        document.getElementById("bt3").addEventListener("click",bt3);
+    </script>
+</body>
+</html>
